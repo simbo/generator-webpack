@@ -1,0 +1,30 @@
+{
+  "name": "@simbo/generator-webpack",
+  "version": "0.1.0",
+  "description": "A yeoman generator for my usual webpack stacks.",
+  "author": "Simon Lepel <simbo@simbo.de> (http://simbo.de)",
+  "repository": "simbo/generator-webpack",
+  "homepage": "https://github.com/simbo/generator-webpack#readme",
+  "bugs": "https://github.com/simbo/generator-webpack/issues",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "webpack",
+    "angular",
+    "vue",
+    "yeoman-generator"
+  ],
+  "main": "generators/index.js",
+  "files": [
+    "generators/",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "echo \"No tests specified. Skipping...\" && exit 0"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
