@@ -23,7 +23,7 @@
     "README.md"
   ],
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "scripts": {
     "test": "echo \"No tests specified. Skipping...\" && exit 0"
