@@ -1,16 +1,22 @@
 language: node_js
+
 node_js:
 - '6'
 - '8'
 - '9'
 - '10'
+
 env:
   global:
     secure: ZsCGc/+r2aLNMAzjQCOAQeAUZSz0ymIcqv7fOMMn96bUa1Ju6+juS6lLh5gTj7IJpcl1zNyeK/WK+LZZgx/Tvdc5gUtrpSz927a/YVnfaO/ALGvYPV7rz1obGfnywUIR58g6F8Oe/ZE8+F/4I+pp3SAOqssKq91zoUFkNfo5JEPyMtJOp52FzvLoOwBlnOZv2is5gZMFqr9XKzjnKSl2z6bGersVa9JW5zfxMQMioSL2dS3oeg54mtj/W22zZ1m+ZCcwBOzMgi9sb6r7GIRA+QDe9+WR/WzbTAX/QQqDqQ1QU/t6wHfo5HFVZChsZPJJAU6JDk4A1r8fpxrjN6FYB3gw86tuVwSgyM5x9YL8Wd21sy86cs9fAyE1txCBVuqOgB9F9NKbwVPlirmNSEY3h68BHtZpb9iDj8VJ4aqMuAOZlqPKRlR4bizyvhsJv9Yq+A6viJayhH6yb5Ab2ddxLm27kh2TYNwuHYavVK4qXAtdy7ZYtanhyh5jw4ZvnfdVX9lC7+qQ5GurHvhRu0EgzEFhwPtkcLql695P28tK14a8Zwvt61LDKX8v52nOEMk3kAHEs4OzH5XmqNbYo+GJpSWM1TaVM4kWu4lq8h4Vg/FXR1xDxS1SjTBkryCENcd16MR78y0cnTL1XyfsXtkG/kqMgJ9ZWMzTOVz5SbMj2po=
-deploy:
-  provider: npm
-  email: simbo@simbo.de
-  api_key: "${NPM_API_KEY}"
-  on:
-    tags: true
-    node: '8'
+
+jobs:
+  include:
+    - stage: release
+      node_js: '8'
+      deploy:
+        provider: npm
+        email: simbo@simbo.de
+        api_key: "${NPM_API_KEY}"
+        on:
+          tags: true
