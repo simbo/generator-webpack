@@ -28,6 +28,9 @@
   "scripts": {
     "test": "echo \"No tests specified. Skipping...\" && exit 0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "merge-options": "^1.0.1",
+    "yeoman-generator": "^2.0.5"
+  },
   "devDependencies": {}
 }
