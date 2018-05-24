@@ -22,6 +22,9 @@
     "LICENSE",
     "README.md"
   ],
+  "engines": {
+    "node": ">=4"
+  },
   "scripts": {
     "test": "echo \"No tests specified. Skipping...\" && exit 0"
   },
