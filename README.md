@@ -61,7 +61,8 @@ purpose, they all share the same common features and base configuration.
     optimized respectively
 
   - [Webpack Dev Server](https://webpack.js.org/configuration/dev-server/)
-    supporting [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/)
+    supporting
+    [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/)
 
   - [Bundle Analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer) service
 
@@ -108,7 +109,7 @@ The generated file/folder structure will look somehow like this:
 ## Requirements
 
 This is a yeoman generator. You should have installed
-[yeoman](http://yeoman.io/)…
+[yeoman](http://yeoman.io/).
 
 
 ## Installation
@@ -120,6 +121,7 @@ You can install it using…
 ``` sh
 # …npm
 npm install -g @simbo/generator-webpack
+
 # …or yarn
 yarn global add @simbo/generator-webpack
 ```
@@ -144,7 +146,7 @@ All arguments and parameters are optional.
 
 See also `yo @simbo/webpack --help` for auto-generated usage information.
 
-Possible values for `framework` argument:
+Possible values for `<framework>` argument:
 
   - `vanilla` (default)
   - `vue`
@@ -156,29 +158,38 @@ Possible values for `framework` argument:
   - `--quiet` | `-q`  
     reduce prompts to minimum / use default values where possible
 
-  - `--author <VALUE>` | `-a <VALUE>`'  
-    description: 'Value for author name
+  - `--author <VALUE>` | `-a <VALUE>`  
+    Set value for author name
 
-  - `--email <VALUE>` | `-e <VALUE>`'  
-    description: 'Value for author email
+  - `--email <VALUE>` | `-e <VALUE>`  
+    Set value for author email
 
-  - `--github <VALUE>` | `-g <VALUE>`'  
-    description: 'Value for github username
+  - `--github <VALUE>` | `-g <VALUE>`  
+    Set value for github username
 
-  - `--description <VALUE>` | `-d <VALUE>`'  
-    description: 'Value for project description
+  - `--name <VALUE>` | `-n <VALUE>`  
+    Set value for project name
 
-  - `--version <VALUE>` | `-v <VALUE>`'  
-    description: 'Value for project version
+  - `--description <VALUE>` | `-d <VALUE>`  
+    Set value for project description
+
+  - `--project-version <VALUE>` | `-v <VALUE>`  
+    Set value for project version
 
   - `--no-docker`  
     Disable docker support (enabled by default)
 
-  - `--no-make`  
+  - `--no-makefile`  
     Disable make as task runner (enabled by default; requires docker support)
 
-  - `--no-yarn`  
-    Disable yarn support (enabled by default)
+  - `--no-prettier`  
+    Disable prettier.js support (enabled by default)
+
+  - `--no-editorconfig`  
+    Disable prettier.js support (enabled by editorconfig)
+
+  - `--npm`  
+    Enable npm install (disabled by default; disables yarn install)
 
 
 ## Development
