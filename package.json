@@ -1,7 +1,7 @@
 {
   "name": "@simbo/generator-webpack",
   "version": "0.1.0",
-  "description": "A yeoman generator for my usual webpack stacks.",
+  "description": "A yeoman generator for my usual webpack stacks (vanilla, vue or angular) including support for TypeScript, Stylus, Pug, Docker and more.",
   "author": "Simon Lepel <simbo@simbo.de> (http://simbo.de)",
   "repository": "simbo/generator-webpack",
   "homepage": "https://github.com/simbo/generator-webpack#readme",
@@ -11,10 +11,13 @@
     "access": "public"
   },
   "keywords": [
+    "yeoman-generator",
     "webpack",
     "angular",
     "vue",
-    "yeoman-generator"
+    "pug",
+    "typescript",
+    "stylus"
   ],
   "main": "generators/index.js",
   "files": [
