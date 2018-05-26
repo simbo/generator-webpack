@@ -1,22 +1,19 @@
 language: node_js
-
 node_js:
-- '6'
 - '8'
 - '9'
 - '10'
-
 env:
   global:
-    secure: ZsCGc/+r2aLNMAzjQCOAQeAUZSz0ymIcqv7fOMMn96bUa1Ju6+juS6lLh5gTj7IJpcl1zNyeK/WK+LZZgx/Tvdc5gUtrpSz927a/YVnfaO/ALGvYPV7rz1obGfnywUIR58g6F8Oe/ZE8+F/4I+pp3SAOqssKq91zoUFkNfo5JEPyMtJOp52FzvLoOwBlnOZv2is5gZMFqr9XKzjnKSl2z6bGersVa9JW5zfxMQMioSL2dS3oeg54mtj/W22zZ1m+ZCcwBOzMgi9sb6r7GIRA+QDe9+WR/WzbTAX/QQqDqQ1QU/t6wHfo5HFVZChsZPJJAU6JDk4A1r8fpxrjN6FYB3gw86tuVwSgyM5x9YL8Wd21sy86cs9fAyE1txCBVuqOgB9F9NKbwVPlirmNSEY3h68BHtZpb9iDj8VJ4aqMuAOZlqPKRlR4bizyvhsJv9Yq+A6viJayhH6yb5Ab2ddxLm27kh2TYNwuHYavVK4qXAtdy7ZYtanhyh5jw4ZvnfdVX9lC7+qQ5GurHvhRu0EgzEFhwPtkcLql695P28tK14a8Zwvt61LDKX8v52nOEMk3kAHEs4OzH5XmqNbYo+GJpSWM1TaVM4kWu4lq8h4Vg/FXR1xDxS1SjTBkryCENcd16MR78y0cnTL1XyfsXtkG/kqMgJ9ZWMzTOVz5SbMj2po=
-
+  - secure: ZsCGc/+r2aLNMAzjQCOAQeAUZSz0ymIcqv7fOMMn96bUa1Ju6+juS6lLh5gTj7IJpcl1zNyeK/WK+LZZgx/Tvdc5gUtrpSz927a/YVnfaO/ALGvYPV7rz1obGfnywUIR58g6F8Oe/ZE8+F/4I+pp3SAOqssKq91zoUFkNfo5JEPyMtJOp52FzvLoOwBlnOZv2is5gZMFqr9XKzjnKSl2z6bGersVa9JW5zfxMQMioSL2dS3oeg54mtj/W22zZ1m+ZCcwBOzMgi9sb6r7GIRA+QDe9+WR/WzbTAX/QQqDqQ1QU/t6wHfo5HFVZChsZPJJAU6JDk4A1r8fpxrjN6FYB3gw86tuVwSgyM5x9YL8Wd21sy86cs9fAyE1txCBVuqOgB9F9NKbwVPlirmNSEY3h68BHtZpb9iDj8VJ4aqMuAOZlqPKRlR4bizyvhsJv9Yq+A6viJayhH6yb5Ab2ddxLm27kh2TYNwuHYavVK4qXAtdy7ZYtanhyh5jw4ZvnfdVX9lC7+qQ5GurHvhRu0EgzEFhwPtkcLql695P28tK14a8Zwvt61LDKX8v52nOEMk3kAHEs4OzH5XmqNbYo+GJpSWM1TaVM4kWu4lq8h4Vg/FXR1xDxS1SjTBkryCENcd16MR78y0cnTL1XyfsXtkG/kqMgJ9ZWMzTOVz5SbMj2po=
+  - secure: FTwx21L7uLq5Hr51g5su+3zBzS0mysDuqTHel57G4x7wWzupex60UJJGMO5+LWQgstnS0ggKCASMhKGBldKo7nW86sE+TDazgFvwid3mp1aCaenc+5aSSWz3ZbjseK9UEkOjo/sSSZGUt/8lpb+6ACUBVYybGzhNSnCHC/R0+blAHsFT8RKwnEU/qDjBzVnKOOq1d6xly8J/0AyB7cZOnytIb8EwsPE24Ig+zYJJiNPIlV9d6TLRM8OteCZB2DnAHkUNFLYRtNZsp4eIkjJyKPh7+EoqgVmmyrDXBMtWvVjJhPdNCE5oQlZH4lRGzgk0A0/euoE2+pAZag5Yq9SPk0zyRqW5np0eZp7HIHptid+MF9dHLPhPpNAXAHbuM9+OvcHvRbfSLBDdwfklQM5xpHPcV8M+KTCTGirwXwQ0ncN6RLJPfMwKznZhPAjzyfnsv3HgAZZOQvGftWz8oye4/VBgHl5zi8cteyHsS3o83zkom+JsVJMJtKbxY+PKNGLq2G+KAlSn/VPi6Lplj/xLE2oZqirVdQIHULN5Qp4htgLZZCfsg0kDJ0vzBvFj5igH8+8WkH2K9+KvYayVl/yldpUFPhAFbQEPVNs51cFig7SfUvGMEUuXdgd9JcuZVxfB7cbVX+iPnTwy23ejg0WAud1EphoHgpXueLpBcc5zjB4=
 jobs:
   include:
-    - stage: release
-      node_js: '8'
-      deploy:
-        provider: npm
-        email: simbo@simbo.de
-        api_key: "${NPM_API_KEY}"
-        on:
-          tags: true
+  - stage: release
+    node_js: '8'
+    deploy:
+    - provider: npm
+      email: simbo@simbo.de
+      api_key: "${NPM_API_KEY}"
+      on:
+        tags: true
