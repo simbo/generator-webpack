@@ -142,7 +142,7 @@ yo @simbo/webpack
 yo @simbo/webpack [<framework>] [OPTIONS]
 ```
 
-All arguments and parameters are optional.
+All parameters are optional.
 
 See also `yo @simbo/webpack --help` for auto-generated usage information.
 
@@ -155,25 +155,25 @@ Possible values for `<framework>` argument:
 
 #### Options
 
-  - `--quiet` | `-q`  
+  - `--quiet` or `-q`  
     reduce prompts to minimum / use default values where possible
 
-  - `--author <VALUE>` | `-a <VALUE>`  
+  - `--author <VALUE>` or `-a <VALUE>`  
     Set value for author name
 
-  - `--email <VALUE>` | `-e <VALUE>`  
+  - `--email <VALUE>` or `-e <VALUE>`  
     Set value for author email
 
-  - `--github <VALUE>` | `-g <VALUE>`  
+  - `--github <VALUE>` or `-g <VALUE>`  
     Set value for github username
 
-  - `--name <VALUE>` | `-n <VALUE>`  
+  - `--name <VALUE>` or `-n <VALUE>`  
     Set value for project name
 
-  - `--description <VALUE>` | `-d <VALUE>`  
+  - `--description <VALUE>` or `-d <VALUE>`  
     Set value for project description
 
-  - `--project-version <VALUE>` | `-v <VALUE>`  
+  - `--project-version <VALUE>` or `-v <VALUE>`  
     Set value for project version
 
   - `--no-docker`  
@@ -186,9 +186,9 @@ Possible values for `<framework>` argument:
     Disable prettier.js support (enabled by default)
 
   - `--no-editorconfig`  
-    Disable prettier.js support (enabled by editorconfig)
+    Disable editorconfig support (enabled by default)
 
-  - `--npm`  
+  - `--npm` or `--no-yarn`  
     Enable npm install (disabled by default; disables yarn install)
 
 
