@@ -127,14 +127,12 @@ module.exports = class extends Generator {
   }
 
   async prompting() {
-    const prompts = [
-      {
+    const prompts = [{
         name: 'authorName',
         message: 'Author’s name',
         when: () => !this.props.authorName,
         default: () => this.pkgAuthor.name || this.npmrc['init.author.name'] || this.user.git.name()
       },
-
       {
         name: 'authorEmail',
         message: 'Author’s email',
@@ -142,48 +140,41 @@ module.exports = class extends Generator {
         default: () =>
           this.pkgAuthor.email || this.npmrc['init.author.email'] || this.user.git.email()
       },
-
       {
         name: 'authorWebsite',
         message: 'Author’s website',
         when: () => !this.props.authorWebsite,
         default: () => this.pkgAuthor.url || this.npmrc['init.author.url']
       },
-
       {
         name: 'githubAccount',
         message: 'GitHub account',
         when: () => !this.props.githubAccount,
         default: async () => await githubUsername(this.props.authorEmail)
       },
-
       {
         name: 'projectName',
         message: 'Project name',
         when: () => !this.props.projectName,
         default: () => this.pkg.name || this.options.env.cwd.split(path.sep).pop()
       },
-
       {
         name: 'projectDescription',
         message: 'Project description',
         when: () => !this.props.projectDescription,
         default: () => this.pkg.description || 'This project is awesome!'
       },
-
       {
         name: 'projectVersion',
         message: 'Project version',
         when: () => !this.props.projectVersion,
         default: () => this.pkg.version || '0.1.0'
       },
-
       {
         name: 'frameworkValue',
         message: 'Choose your stack',
         type: 'list',
-        choices: [
-          {
+        choices: [{
             name: 'Vanilla (no framework)',
             value: 'vanilla'
           },
