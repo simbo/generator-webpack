@@ -106,7 +106,7 @@ module.exports = class extends Generator {
 
   async initializing() {
     this.npmrc = rc('npm');
-    this.pkg = this.fs.readJSON(this.destinationPath('package.json'), {});
+    this.pkg = this.fs.readJSON(this.destinationPath(this.options.generateInto, 'package.json'), {});
     this.pkgAuthor =
       this.pkg.author === 'string' ? parseAuthor(this.pkg.author) : this.pkg.author || {};
 
