@@ -1,4 +1,5 @@
 const Generator = require('yeoman-generator');
+const githubUsername = require('github-username');
 const mergeOptions = require('merge-options');
 const rc = require('rc');
 const parseAuthor = require('parse-author');
@@ -153,7 +154,7 @@ module.exports = class extends Generator {
         name: 'githubAccount',
         message: 'GitHub account',
         when: () => !this.props.githubAccount,
-        default: async () => this.user.github.username()
+        default: async () => await githubUsername(this.props.authorEmail)
       },
 
       {

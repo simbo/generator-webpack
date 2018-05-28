@@ -29,6 +29,7 @@ const prompts = {
 describe('generator-webpack:app', () => {
   beforeAll(() => {
     jest.setTimeout(10000);
+    jest.mock('github-username', () => async () => 'ghuser');
   });
 
   it('creates files', () => testApp()

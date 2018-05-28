@@ -37,6 +37,7 @@
     "@simbo/generator-readme": "^0.1.0",
     "@simbo/generator-tsconfig": "^0.1.0",
     "generator-license": "^5.4.0",
+    "github-username": "^4.1.0",
     "merge-options": "^1.0.1",
     "parse-author": "^2.0.0",
     "rc": "^1.2.8",
