@@ -87,11 +87,9 @@ Beside internal sub generators, `@simbo/generator-webpack` is combined with
 There are auto-generated branches from the latest master build, showing the
 expected results for each setup and also a `README.md` with usage details:
 
-  - [Preview of generated *Vanilla* project]()
-
-  - [Preview of generated *Vue.js* project]()
-
-  - [Preview of generated *Angular* project]()
+  - [Preview of generated ***Vanilla*** project]()
+  - [Preview of generated ***Vue.js*** project]()
+  - [Preview of generated ***Angular*** project]()
 
 The generated file/folder structure will look somehow like this:
 
