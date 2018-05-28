@@ -79,6 +79,7 @@ Beside internal sub generators, `@simbo/generator-webpack` is combined with
   - [@simbo/generator-editorconfig](https://github.com/simbo/generator-editorconfig)
   - [@simbo/generator-prettierrc](https://github.com/simbo/generator-prettierrc)
   - [@simbo/generator-readme](https://github.com/simbo/generator-readme)
+  - [@simbo/generator-tsconfig](https://github.com/simbo/generator-tsconfig)
 
 
 ### Preview of generated Files
