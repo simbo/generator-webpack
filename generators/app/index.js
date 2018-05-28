@@ -132,7 +132,7 @@ module.exports = class extends Generator {
         name: 'authorName',
         message: 'Author’s name',
         when: () => !this.props.authorName,
-        default: () => this.pkg.name || this.npmrc['init.author.name'] || this.user.git.name()
+        default: () => this.pkgAuthor.name || this.npmrc['init.author.name'] || this.user.git.name()
       },
 
       {
