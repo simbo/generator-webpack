@@ -29,11 +29,21 @@
     "node": ">=8"
   },
   "scripts": {
-    "test": "echo \"No tests specified. Skipping...\" && exit 0"
+    "test": "jest"
   },
   "dependencies": {
+    "@simbo/generator-editorconfig": "^0.1.2",
+    "@simbo/generator-prettierrc": "^0.2.1",
+    "@simbo/generator-readme": "^0.1.0",
+    "generator-license": "^5.4.0",
     "merge-options": "^1.0.1",
+    "parse-author": "^2.0.0",
+    "rc": "^1.2.8",
     "yeoman-generator": "^2.0.5"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "jest": "^23.0.1",
+    "yeoman-assert": "^3.1.1",
+    "yeoman-test": "^1.7.2"
+  }
 }

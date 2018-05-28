@@ -1,0 +1,26 @@
+<%
+  const [cmd, sep] = features.npm ? ['npm', ' --'] : ['yarn', ''];
+%>{
+  "name": "<%= projectName %>",
+  "description": "<%= projectDescription %>",
+  "version": "<%= projectVersion %>",
+  "author": "<%= authorName %><% if (authorEmail) { %> <<%= authorEmail%>><% } %><% if (authorWebsite) { %> (<%= authorWebsite %>)<% } %>",
+  "license": "<%= license %>",
+  "repository": "<%= projectRepository %>",
+  "homepage": "<%= projectWebsite %>",
+  "bugs": "<%= projectIssues %>",
+  "private": true,
+  "main": "dist/index.html",
+  "scripts": {
+    "analyzer": "BUNDLE_ANALYZER=1 <%= cmd %> run build",
+    "build": "<%= cmd %> run build:prod",
+    "build:dev": "webpack --progress",
+    "build:prod": "NODE_ENV=production <%= cmd %> run build:dev",
+    "build:ci": "<%= cmd %> run build:prod<%= sep %> --no-progress --bail",
+    "dev": "<%= cmd %> run serve:dev",
+    "serve:dev": "webpack-dev-server --color",
+    "serve:prod": "NODE_ENV=production <%= cmd %> run serve",
+    "test": "echo \"No tests specified. Skipping...\" && exit 0",
+    "watch": "<%= cmd %> run build:dev<%= sep %> --watch"
+  }
+}
