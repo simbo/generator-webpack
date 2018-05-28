@@ -257,7 +257,8 @@ module.exports = class extends Generator {
       email: this.props.authorEmail,
       website: this.props.authorWebsite,
       license: this.props.license,
-      licenseYear: this.props.licenseYear
+      licenseYear: this.props.licenseYear,
+      output: path.join(this.options.generateInto, 'LICENSE')
     });
   }
 
