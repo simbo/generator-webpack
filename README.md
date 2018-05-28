@@ -15,6 +15,7 @@ generator-webpack
 
 - [About](#about)
   - [Common Features](#common-features)
+  - [Sub Generators](#sub-generators)
   - [Preview of generated Files](#preview-of-generated-files)
 - [Requirements](#requirements)
 - [Installation](#installation)
@@ -68,6 +69,16 @@ purpose, they all share the same common features and base configuration.
 
   - optional Docker-wrapped development environment with self-documented
     Makefile as task runner
+
+
+### Sub Generators
+
+Beside internal sub generators, `@simbo/generator-webpack` is combined with
+
+  - [generator-license](https://github.com/jozefizso/generator-license)
+  - [@simbo/generator-editorconfig](https://github.com/simbo/generator-editorconfig)
+  - [@simbo/generator-prettierrc](https://github.com/simbo/generator-prettierrc)
+  - [@simbo/generator-readme](https://github.com/simbo/generator-readme)
 
 
 ### Preview of generated Files
@@ -144,52 +155,13 @@ yo @simbo/webpack [<framework>] [OPTIONS]
 
 All parameters are optional.
 
-See also `yo @simbo/webpack --help` for auto-generated usage information.
-
-Possible values for `<framework>` argument:
+Possible values for `<framework>` are:
 
   - `vanilla` (default)
   - `vue`
   - `angular`
 
-
-#### Options
-
-  - `--quiet` or `-q`  
-    reduce prompts to minimum / use default values where possible
-
-  - `--author <VALUE>` or `-a <VALUE>`  
-    Set value for author name
-
-  - `--email <VALUE>` or `-e <VALUE>`  
-    Set value for author email
-
-  - `--github <VALUE>` or `-g <VALUE>`  
-    Set value for github username
-
-  - `--name <VALUE>` or `-n <VALUE>`  
-    Set value for project name
-
-  - `--description <VALUE>` or `-d <VALUE>`  
-    Set value for project description
-
-  - `--project-version <VALUE>` or `-v <VALUE>`  
-    Set value for project version
-
-  - `--no-docker`  
-    Disable docker support (enabled by default)
-
-  - `--no-makefile`  
-    Disable make as task runner (enabled by default; requires docker support)
-
-  - `--no-prettier`  
-    Disable prettier.js support (enabled by default)
-
-  - `--no-editorconfig`  
-    Disable editorconfig support (enabled by default)
-
-  - `--npm` or `--no-yarn`  
-    Enable npm install (disabled by default; disables yarn install)
+See also `yo @simbo/webpack --help` for detailed usage information.
 
 
 ## Development
@@ -200,14 +172,12 @@ machine.
 ``` sh
 # link using npm
 npm link
+
 # or link using yarn
 yarn link
-
-# then elsewhere
-yo @simbo/webpack
 ```
 
 
 ## License
 
-[MIT &copy; Simon Lepel](http://simbo.mit-license.org/)
+[MIT @ 2018 Simon Lepel](http://simbo.mit-license.org/)
