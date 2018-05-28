@@ -5,9 +5,7 @@
 module.exports = {
 
   common: {
-    dependencies: {
-      'css-reset-and-normalize': '^1.0.1'
-    },
+    dependencies: {},
     devDependencies: {
       '@babel/core': '^7.0.0-beta.48',
       '@babel/plugin-transform-runtime': '^7.0.0-beta.48',

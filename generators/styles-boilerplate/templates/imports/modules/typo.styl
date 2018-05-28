@@ -1,0 +1,18 @@
+@require 'vars'
+
+/**
+ * Typography
+ */
+
+$fontSans
+  font-family: $fontStacks.system
+
+$fontMono
+  font-family: $fontStacks.mono
+
+body
+  @extends $fontSans
+  text-rendering: optimizeLegibility
+
+pre, code, kbd, samp
+  @extends $fontMono

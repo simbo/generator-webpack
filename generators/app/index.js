@@ -260,6 +260,10 @@ module.exports = class extends Generator {
       licenseYear: this.props.licenseYear,
       output: path.join(this.options.generateInto, 'LICENSE')
     });
+
+    this.composeWith(require.resolve('../styles-boilerplate'), {
+      generateInto: this.options.generateInto
+    });
   }
 
   async writing() {
