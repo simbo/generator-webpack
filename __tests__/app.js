@@ -11,6 +11,7 @@ const files = [
   'LICENSE',
   'package.json',
   'README.md',
+  'tsconfig.json',
   'webpack.config.js'
 ];
 

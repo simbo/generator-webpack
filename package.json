@@ -35,6 +35,7 @@
     "@simbo/generator-editorconfig": "^0.1.2",
     "@simbo/generator-prettierrc": "^0.2.1",
     "@simbo/generator-readme": "^0.1.0",
+    "@simbo/generator-tsconfig": "^0.1.0",
     "generator-license": "^5.4.0",
     "merge-options": "^1.0.1",
     "parse-author": "^2.0.0",

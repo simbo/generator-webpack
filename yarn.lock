@@ -46,6 +46,13 @@
     merge-options "^1.0.1"
     yeoman-generator "^2.0.5"
 
+"@simbo/generator-tsconfig@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@simbo/generator-tsconfig/-/generator-tsconfig-0.1.0.tgz#a9176f090daf30393a89f98bee0d5dd60cb734d2"
+  dependencies:
+    merge-options "^1.0.1"
+    yeoman-generator "^2.0.5"
+
 "@sinonjs/formatio@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@sinonjs/formatio/-/formatio-2.0.0.tgz#84db7e9eb5531df18a8c5e0bfb6e449e55e654b2"

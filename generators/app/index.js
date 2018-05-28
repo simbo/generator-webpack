@@ -237,6 +237,11 @@ module.exports = class extends Generator {
       generateInto: this.options.generateInto
     });
 
+    this.composeWith(require.resolve('@simbo/generator-tsconfig/generators/app'), {
+      generateInto: this.options.generateInto,
+      config: {}
+    });
+
     this.composeWith(require.resolve('@simbo/generator-readme/generators/app'), {
       generateInto: this.options.generateInto,
       projectName: this.props.projectName,
