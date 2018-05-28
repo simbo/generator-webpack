@@ -33,7 +33,8 @@ describe('generator-webpack:app', () => {
         })
         .withPrompts({})
         .then(() => {
-          assert.file(files.map(file => `subfolder/${file}`));
+          // generator-license does not support generateInto
+          assert.file(files.filter(file => file !== 'LICENSE').map(file => `subfolder/${file}`));
         }));
   });
 });
