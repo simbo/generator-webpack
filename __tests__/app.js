@@ -15,9 +15,15 @@ const files = [
   'webpack.config.js'
 ];
 
-jest.setTimeout(10000);
-
 describe('generator-webpack:app', () => {
+  beforeEach(() => {
+    jest.setTimeout(10000);
+
+    jest.mock('github-username', () => {
+      return () => Promise.resolve('unicorn');
+    });
+  });
+
   it('creates files', () =>
     testApp()
       .withPrompts({})
