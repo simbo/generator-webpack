@@ -15,32 +15,37 @@ const files = [
   'webpack.config.js'
 ];
 
-describe('generator-webpack:app', () => {
-  beforeEach(() => {
-    jest.setTimeout(10000);
+const prompts = {
+  authorName: 'foo',
+  authorEmail: 'foo@bar.com',
+  authorWebsite: 'http://foo.codes/',
+  githubAccount: 'foo',
+  projectName: 'foo-bar',
+  projectDescription: 'Foo bar!',
+  projectVersion: '1.0.0',
+  frameworkValue: 'vanilla'
+};
 
-    jest.mock('github-username', () => {
-      return () => Promise.resolve('unicorn');
-    });
+describe('generator-webpack:app', () => {
+  beforeAll(() => {
+    jest.setTimeout(10000);
   });
 
-  it('creates files', () =>
-    testApp()
-      .withPrompts({})
-      .then(() => {
-        assert.file(files);
-      }));
+  it('creates files', () => testApp()
+    .withPrompts(prompts)
+    .then(() => {
+      assert.file(files);
+    }));
 
   describe('with option `generateInto`', () => {
-    it('creates files in desired path', () =>
-      testApp()
-        .withOptions({
-          generateInto: 'subfolder'
-        })
-        .withPrompts({})
-        .then(() => {
-          // generator-license does not support generateInto
-          assert.file(files.filter(file => file !== 'LICENSE').map(file => `subfolder/${file}`));
-        }));
+    it('creates files in desired path', () => testApp()
+      .withOptions({
+        generateInto: 'subfolder'
+      })
+      .withPrompts(prompts)
+      .then(() => {
+        // generator-license does not support generateInto
+        assert.file(files.filter(file => file !== 'LICENSE').map(file => `subfolder/${file}`));
+      }));
   });
 });
