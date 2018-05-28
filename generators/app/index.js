@@ -264,6 +264,10 @@ module.exports = class extends Generator {
     this.composeWith(require.resolve('../styles-boilerplate'), {
       generateInto: this.options.generateInto
     });
+
+    this.composeWith(require.resolve('../sort-package'), {
+      generateInto: this.options.generateInto
+    });
   }
 
   async writing() {

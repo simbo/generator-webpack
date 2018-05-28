@@ -41,6 +41,7 @@
     "merge-options": "^1.0.1",
     "parse-author": "^2.0.0",
     "rc": "^1.2.8",
+    "sort-object": "^3.0.2",
     "yeoman-generator": "^2.0.5"
   },
   "devDependencies": {
